@@ -1,0 +1,11 @@
+/*
+!.gitignore
+!.vercelignore
+!index.html
+!main.entry.tsx
+!package.json
+!package-lock.json
+!src
+!tsconfig.json
+!vercel.json
+!vite.config.ts
