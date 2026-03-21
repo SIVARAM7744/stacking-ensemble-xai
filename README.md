@@ -136,10 +136,13 @@ If providers are unavailable, fallback feature values are used unless `strict_li
 - `backend/app` is the active backend path.
 - If frontend path contains `#`, Vite may behave inconsistently. A clean path without `#` is recommended.
 
-## Railway Deployment
-This project is prepared for Railway using one GitHub repo and two Railway services:
+## Cloud Deployment
+Recommended split:
 
-- frontend service from repo root using [`Dockerfile`](./Dockerfile)
-- backend service from repo root using [`backend.Dockerfile`](./backend.Dockerfile)
+- frontend on Vercel
+- backend on Railway
 
-Deployment steps and required variables are documented in [`RAILWAY_DEPLOY.md`](./RAILWAY_DEPLOY.md).
+Deployment steps and required variables are documented in:
+
+- [`VERCEL_DEPLOY.md`](./VERCEL_DEPLOY.md)
+- [`RAILWAY_DEPLOY.md`](./RAILWAY_DEPLOY.md)

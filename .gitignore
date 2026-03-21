@@ -1,6 +1,7 @@
 .venv/
 node_modules/
 .tmp/
+.vercel/
 __pycache__/
 *.pyc
 *.pyo

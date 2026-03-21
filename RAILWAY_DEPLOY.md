@@ -1,23 +1,11 @@
-# Railway Deploy Guide
+# Railway Backend Deploy Guide
 
-This repo is ready to deploy to Railway as:
+This repo is ready to deploy the backend to Railway from the repo root.
 
-- 1 GitHub repo
-- 1 Railway project
-- 2 Railway services
+Recommended split:
 
-Do not split this into 2 repos.
-
-## Recommended Architecture
-
-- `frontend` service
-  - Source: this repo
-  - Root directory: `/`
-  - Dockerfile: root [`Dockerfile`](./Dockerfile)
-- `backend` service
-  - Source: this repo
-  - Root directory: `/`
-  - Custom Dockerfile path: `backend.Dockerfile`
+- frontend on Vercel
+- backend on Railway
 
 The backend service must use the repo root as its source because it needs both:
 
@@ -39,20 +27,7 @@ Required artifact folders already used by the backend:
 ### 1. Create a Railway Project
 
 - In Railway, create a new project from your GitHub repo.
-
-### 2. Create Frontend Service
-
-- Add a service from the same repo.
-- Keep source root at repo root `/`.
-- Railway will use the root [`Dockerfile`](./Dockerfile).
-
-Set this variable on the frontend service:
-
-- `VITE_API_BASE_URL=https://<your-backend-public-domain>`
-
-After deployment, generate a public domain for this service.
-
-### 3. Create Backend Service
+### 2. Create Backend Service
 
 - Add another service from the same repo.
 - Keep source root at repo root `/`.
@@ -88,10 +63,6 @@ Without a volume, SQLite will still work, but data can be ephemeral.
 
 ## Railway Variables Summary
 
-### Frontend
-
-- `VITE_API_BASE_URL=https://<backend-domain>`
-
 ### Backend
 
 - `RAILWAY_DOCKERFILE_PATH=backend.Dockerfile`
@@ -109,8 +80,6 @@ Optional MySQL mode instead of SQLite:
 
 ## Expected Public URLs
 
-- Frontend:
-  - `https://<frontend-domain>`
 - Backend docs:
   - `https://<backend-domain>/docs`
 - Backend health:
@@ -119,6 +88,5 @@ Optional MySQL mode instead of SQLite:
 ## Notes
 
 - Backend runs on `0.0.0.0:$PORT` inside Railway.
-- Frontend is built with Vite and served as a static app.
-- `VITE_API_BASE_URL` must point to the backend public URL, not a local URL.
-- Browser clients cannot use Railway private service hostnames; use the backend's generated public domain for the frontend.
+- The backend Dockerfile is [`backend.Dockerfile`](./backend.Dockerfile).
+- Use the backend's generated public domain as `VITE_API_BASE_URL` in Vercel.
