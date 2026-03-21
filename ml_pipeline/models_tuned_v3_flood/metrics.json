@@ -1,0 +1,73 @@
+{
+  "training_timestamp": "2026-03-07T00:50:25.636423",
+  "model_version": "v1.0.0",
+  "base_models": {
+    "random_forest": {
+      "accuracy": 91.25,
+      "precision": 80.0,
+      "recall": 75.0,
+      "f1_score": 77.42,
+      "roc_auc": 96.88
+    },
+    "gradient_boosting": {
+      "accuracy": 83.75,
+      "precision": 58.82,
+      "recall": 62.5,
+      "f1_score": 60.61,
+      "roc_auc": 93.36
+    },
+    "svm": {
+      "accuracy": 90.0,
+      "precision": 78.57,
+      "recall": 68.75,
+      "f1_score": 73.33,
+      "roc_auc": 96.48
+    }
+  },
+  "stacking_model": {
+    "accuracy": 87.5,
+    "precision": 68.75,
+    "recall": 68.75,
+    "f1_score": 68.75,
+    "roc_auc": 96.0,
+    "confusion_matrix": {
+      "tn": 59,
+      "fp": 5,
+      "fn": 5,
+      "tp": 11
+    }
+  },
+  "dri_configuration": {
+    "stacked_weight": 0.6,
+    "base_weight": 0.4,
+    "risk_thresholds": {
+      "low_max": 0.33,
+      "moderate_max": 0.66
+    }
+  },
+  "dri_statistics": {
+    "mean_dri": 0.21782250000000003,
+    "std_dri": 0.2828267032023387,
+    "min_dri": 0.0287,
+    "max_dri": 0.9102,
+    "risk_distribution": {
+      "LOW": 60,
+      "HIGH": 11,
+      "MODERATE": 9
+    }
+  },
+  "feature_importance": {
+    "seismic_activity": 53.8,
+    "atmospheric_pressure": 10.7,
+    "previous_disaster": 9.9,
+    "wind_speed": 9.1,
+    "temperature": 8.6,
+    "humidity": 7.9
+  },
+  "preprocessing": {
+    "missing_value_handling": "median_imputation",
+    "normalization": "min_max_scaler",
+    "train_test_split": "80/20",
+    "stratified": true
+  }
+}

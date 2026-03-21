@@ -1,0 +1,18 @@
+{
+  "feature_importance": {
+    "seismic_activity": 0.5451477522475887,
+    "atmospheric_pressure": 0.10618039567240406,
+    "previous_disaster": 0.09804566792165091,
+    "wind_speed": 0.08578779137552643,
+    "humidity": 0.08468060388212516,
+    "temperature": 0.08015778890070473
+  },
+  "feature_names": [
+    "temperature",
+    "humidity",
+    "wind_speed",
+    "atmospheric_pressure",
+    "previous_disaster",
+    "seismic_activity"
+  ]
+}

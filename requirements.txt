@@ -1,0 +1,7 @@
+# Unified Python requirements for full project setup.
+# One-command install:
+#   python -m pip --python .\.venv\Scripts\python.exe install -r requirements.txt
+
+-r backend/requirements.txt
+-r ml_pipeline/requirements.txt
+

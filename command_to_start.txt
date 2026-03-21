@@ -1,0 +1,64 @@
+PowerShell from project root
+============================
+
+Terminal 1
+.\start_backend.cmd
+
+Terminal 2
+.\start_frontend.cmd
+
+Open
+http://127.0.0.1:5173
+
+Backend docs
+http://127.0.0.1:8000/docs
+
+Manual backend
+==============
+
+cd "D:\1. WORK\PROJECTS\# DISASTER PREDICTION - (A)\DISASTER FULL STACK\backend\app"
+..\..\.venv\Scripts\python.exe -m uvicorn main:app --reload --host 127.0.0.1 --port 8000
+
+Manual frontend from safe runtime path
+======================================
+
+cd "C:\Users\Public\disaster_full_stack_runtime"
+npm.cmd run dev -- --host 127.0.0.1 --port 5173
+
+Notes
+=====
+
+- Do not run Activate.ps1.
+- In PowerShell, local scripts must be prefixed with .\
+- start_frontend.cmd mirrors the frontend to a safe path because Vite breaks on the # character in the project folder path.
+
+
+
+
+Moderate
+
+Seismic Activity: 4.2
+Temperature: 29
+Humidity: 62
+Wind Speed: 14
+Atmospheric Pressure: 1008
+Previous Disaster: 0
+Optional:
+Location: anything
+Region Code: anything
+Expected from the local model:
+
+Risk Level: MODERATE
+DRI: about 0.5426
+High
+
+Seismic Activity: 4.5
+Temperature: 29
+Humidity: 62
+Wind Speed: 14
+Atmospheric Pressure: 1008
+Previous Disaster: 0
+Expected from the local model:
+
+Risk Level: HIGH
+DRI: about 0.7172

@@ -1,0 +1,20 @@
+{
+  "feature_importance": {
+    "rainfall": 0.4561763163585073,
+    "soil_moisture": 0.3384107262069437,
+    "atmospheric_pressure": 0.1393486529615388,
+    "humidity": 0.030711928721721828,
+    "wind_speed": 0.017794717968446602,
+    "temperature": 0.012881997299668808,
+    "previous_disaster": 0.004675660483173137
+  },
+  "feature_names": [
+    "temperature",
+    "humidity",
+    "wind_speed",
+    "atmospheric_pressure",
+    "previous_disaster",
+    "rainfall",
+    "soil_moisture"
+  ]
+}

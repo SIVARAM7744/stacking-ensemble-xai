@@ -1,0 +1,22 @@
+{
+  "feature_importance": {
+    "seismic_activity": 0.2994742028067327,
+    "soil_moisture": 0.2311236752174534,
+    "rainfall": 0.20387976663095353,
+    "atmospheric_pressure": 0.09637975133600196,
+    "temperature": 0.04991893976840779,
+    "humidity": 0.045272771084032326,
+    "wind_speed": 0.03920995632941878,
+    "previous_disaster": 0.034740936826999615
+  },
+  "feature_names": [
+    "atmospheric_pressure",
+    "wind_speed",
+    "soil_moisture",
+    "seismic_activity",
+    "humidity",
+    "rainfall",
+    "temperature",
+    "previous_disaster"
+  ]
+}

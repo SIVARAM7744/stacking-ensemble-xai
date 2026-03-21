@@ -1,0 +1,11 @@
+.venv/
+node_modules/
+.tmp/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+dist/
+backend/disaster_prediction.db
+/C:\Users\Public\disaster_full_stack_runtime/

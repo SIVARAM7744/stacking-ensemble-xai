@@ -1,0 +1,74 @@
+{
+  "training_timestamp": "2026-03-07T00:46:15.871503",
+  "model_version": "v1.0.0",
+  "base_models": {
+    "random_forest": {
+      "accuracy": 89.17,
+      "precision": 82.35,
+      "recall": 58.33,
+      "f1_score": 68.29,
+      "roc_auc": 88.26
+    },
+    "gradient_boosting": {
+      "accuracy": 88.33,
+      "precision": 77.78,
+      "recall": 58.33,
+      "f1_score": 66.67,
+      "roc_auc": 91.28
+    },
+    "svm": {
+      "accuracy": 90.83,
+      "precision": 88.24,
+      "recall": 62.5,
+      "f1_score": 73.17,
+      "roc_auc": 91.86
+    }
+  },
+  "stacking_model": {
+    "accuracy": 89.17,
+    "precision": 82.35,
+    "recall": 58.33,
+    "f1_score": 68.29,
+    "roc_auc": 90.49,
+    "confusion_matrix": {
+      "tn": 93,
+      "fp": 3,
+      "fn": 10,
+      "tp": 14
+    }
+  },
+  "dri_configuration": {
+    "stacked_weight": 0.6,
+    "base_weight": 0.4,
+    "risk_thresholds": {
+      "low_max": 0.33,
+      "moderate_max": 0.66
+    }
+  },
+  "dri_statistics": {
+    "mean_dri": 0.17931916666666667,
+    "std_dri": 0.2914425530535858,
+    "min_dri": 0.0205,
+    "max_dri": 0.9654,
+    "risk_distribution": {
+      "LOW": 97,
+      "HIGH": 14,
+      "MODERATE": 9
+    }
+  },
+  "feature_importance": {
+    "rainfall": 38.1,
+    "soil_moisture": 37.7,
+    "atmospheric_pressure": 9.2,
+    "humidity": 5.7,
+    "wind_speed": 4.7,
+    "temperature": 3.9,
+    "previous_disaster": 0.6
+  },
+  "preprocessing": {
+    "missing_value_handling": "median_imputation",
+    "normalization": "min_max_scaler",
+    "train_test_split": "80/20",
+    "stratified": true
+  }
+}

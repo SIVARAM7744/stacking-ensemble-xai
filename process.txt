@@ -1,0 +1,33 @@
+Use this exact sequence.
+
+1. Unzip/copy project to a clean path (recommended):
+- `C:\disaster_full_stack`
+
+2. Open PowerShell in that folder and run one-time setup:
+```powershell
+Set-Location "C:\disaster_full_stack"
+.\setup.cmd
+```
+
+3. Start app:
+```powershell
+.\start_all.cmd
+```
+
+4. Open:
+- Frontend: `http://127.0.0.1:5173`
+- Backend docs: `http://localhost:8000/docs`
+
+5. If `5173` is busy, frontend terminal will show a different port (use that URL).
+
+If setup fails:
+- Ensure Python 3.11 exists:
+```powershell
+py -3.11 -V
+```
+- If missing:
+```powershell
+winget install Python.Python.3.11
+```
+
+That’s all. After setup, next times you only run `.\start_all.cmd`.

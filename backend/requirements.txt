@@ -1,0 +1,28 @@
+# ============================================================
+# Ensemble-Based Hybrid Disaster Prediction System — Backend
+# Python 3.10+
+# ============================================================
+
+# ── Web framework ─────────────────────────────────────────
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9
+
+# ── Data validation ────────────────────────────────────────
+pydantic==2.7.1
+
+# ── Database — MySQL via SQLAlchemy ORM ───────────────────
+sqlalchemy==2.0.30
+pymysql==1.1.0              # Pure-Python MySQL driver (required)
+cryptography==42.0.5        # Required by PyMySQL for caching_sha2_password auth
+                             # (default auth plugin in MySQL 8+)
+
+# ── ML model loading ───────────────────────────────────────
+joblib==1.4.2
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.4.2
+
+# ── Utilities ──────────────────────────────────────────────
+python-dotenv==1.0.1
+httpx==0.27.0
